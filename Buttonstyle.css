@@ -1,0 +1,43 @@
+body{
+    display: grid;
+    height: 100vh;
+    align-items: center;
+    justify-items: center;
+}
+button{
+    width: 400px;
+    height: 200px;
+    font-size: 4em ;
+    border: 2px solid green;
+    color: green;
+    background-color: rgb(255, 255, 255);
+    transition-property: text;
+    transition-duration: infinite ;
+    transition-timing-function: steps(3);
+    transition-delay: 1s;
+}
+@keyframes colorchanger {
+    0%{background-color: rgb(255, 255, 255);}
+    50%{background-color: rgb(144, 225, 134);}
+    75%{background-color: rgb(55, 178, 55);}
+    100%{background-color: green;}
+}
+@keyframes widthR {
+    0%{width: 400px;}
+    100%{width: 200px;}
+}
+@keyframes circleC {
+    0%{border-radius: 10%;}
+    25%{border-radius: 30%;}
+    50%{border-radius: 70%;}
+    100%{border-radius: 100%;}
+    
+}
+button:focus{
+    background-color: rgb(255, 255, 255);
+    color: white;   
+}
+button:hover{
+    color: rgb(255, 255, 255);
+    animation: colorchanger 3s ease-in 1 forwards, circleC 2s ease-in 1 forwards, widthR 1s ease-in 1 forwards;
+}
